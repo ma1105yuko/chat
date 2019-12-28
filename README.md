@@ -1,6 +1,6 @@
 
 # Variableavalanchezueha's chat application.
-edit me.
+Edit me.
 
 
 ## CakePHP Application Skeleton
