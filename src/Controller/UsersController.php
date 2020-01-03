@@ -13,6 +13,17 @@ use App\Controller\AppController;
 class UsersController extends AppController
 {
     /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['add']); //認証不要のアクション
+    }
+
+    /**
      * Index method
      *
      * @return \Cake\Http\Response|null
