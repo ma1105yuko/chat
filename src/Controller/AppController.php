@@ -51,5 +51,37 @@ class AppController extends Controller
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+
+        //以下にAuthコンポーネントを追加
+        $this->loadComponent('Auth', [
+          // CakePHPではデフォルトなので省略可能
+          // 'aythenticate' => [
+          //   'Form' => [
+          //     'fields' => [
+          //       'username' => 'username',
+          //       'password' => 'password'
+          //     ]
+          //   ]
+          // ]
+          'loginAction' => [
+            'controller' => 'Login',
+            'action' => 'index'
+          ],
+          'loginRedirect' => [
+            'controller' => 'Messages',
+            'action' => 'index'
+          ],
+          'logoutRedirect' => [
+            'controller' => 'Login',
+            'action' => 'index'
+          ],
+          'unauthorizedRedirect' => [
+            'controller' => 'Login',
+            'action' => 'index'
+          ],
+          'authError' => 'ログインが必要です'
+        ]);
+
+        $this->Auth->allow(['display', 'index', 'view']); //後で要修正
     }
 }
