@@ -1,26 +1,30 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Messages'), ['controller' => 'Messages', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Message'), ['controller' => 'Messages', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <?= $this->Html->charset() ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>signup|chat</title>
+  <?= $this->Html->css('chat') ?>
+</head>
+
+<body id="signup">
+  <div class="box inner">
+    <h1>Create<br>Variableavalanchezueha account</h1>
+
     <?= $this->Form->create($user) ?>
-    <fieldset>
-        <legend><?= __('Add User') ?></legend>
-        <?php
-            echo $this->Form->control('username');
-            echo $this->Form->control('password');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?php
+      echo $this->Form->control('username', [
+          'label' => false,
+          'placeholder' => 'name',
+      ]);
+      echo $this->Form->control('password', [
+          'label' => false,
+          'placeholder' => 'password',
+      ]);
+    ?>
+    <?= $this->Form->submit(__('SIGN UP')) ?>
     <?= $this->Form->end() ?>
-</div>
+  </div>
+</body>
