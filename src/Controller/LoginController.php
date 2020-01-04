@@ -10,6 +10,8 @@ class LoginController extends AppController
      */
     public function index()
     {
+        $this->viewBuilder()->autoLayout(false);
+
         if ($this->Auth->isAuthorized()) {
             return $this->redirect($this->Auth->redirectUrl());
         }

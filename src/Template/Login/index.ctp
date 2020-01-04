@@ -17,8 +17,8 @@
             <input type="submit" value="LOG IN"/>
         </form> -->
         <?= $this->Form->create() ?>
-        <?= $this->Form->control('username', ['placeholder' => 'name']) ?>
-        <?= $this->Form->control('password', ['placeholder' => 'password']) ?>
+        <?= $this->Form->control('username', ['label' => '', 'placeholder' => 'name']) ?>
+        <?= $this->Form->control('password', ['label' => '', 'placeholder' => 'password']) ?>
         <?= $this->Form->submit('LOG IN') ?>
         <?= $this->Form->end() ?>
 
