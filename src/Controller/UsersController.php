@@ -21,6 +21,8 @@ class UsersController extends AppController
     {
         parent::initialize();
         $this->Auth->allow(['add']); //認証不要のアクション
+
+        $this->viewBuilder()->autoLayout(false);
     }
 
     /**
