@@ -7,10 +7,12 @@
     <title>login|chat</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <?= $this->Html->css('chat') ?>
+    <?= $this->Html->css('flashmessage') ?>
 </head>
 <body id="login">
-    <div class="box inner"> 
-        <h1>Welcome<br>Variableavalanchezueha</h1>                   
+<?= $this->Flash->render() ?>
+    <div class="box inner">
+        <h1>Welcome<br>Variableavalanchezueha</h1>
         <!-- <form>
             <input type="text" placeholder="name"/>
             <input type="password" placeholder="password"/>
