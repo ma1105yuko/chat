@@ -68,7 +68,7 @@ class AppController extends Controller
             'action' => 'index'
           ],
           'loginRedirect' => [
-            'controller' => 'Messages',
+            'controller' => 'Chat',
             'action' => 'index'
           ],
           'logoutRedirect' => [
