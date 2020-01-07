@@ -23,7 +23,11 @@
         <?= $this->Form->end() ?>
 
         <div class="signup">
-            <p><a href="#">Create Variableavalanchezueha account→</a></p>
+          <?= $this->Html->link(__('Create Variableavalanchezueha account→'), [
+            'controller' => 'Users',
+            'action' => 'add'
+          ])
+          ?>
         </div>
     </div><!--box fin-->
 </body>
