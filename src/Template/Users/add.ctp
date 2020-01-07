@@ -7,9 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>signup|chat</title>
   <?= $this->Html->css('chat') ?>
+  <?= $this->Html->css('flashmessage') ?>
 </head>
 
 <body id="signup">
+  <?= $this->Flash->render() ?>
   <div class="box inner">
     <h1>Create<br>Variableavalanchezueha account</h1>
 
