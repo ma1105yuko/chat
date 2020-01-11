@@ -118,3 +118,44 @@ form input[type="password"]{
 #signup form input[type="submit"]:hover {
 	background: #16a0aa;
 }
+
+/* chat room*/
+#chat header {
+	background:#202020;
+	padding: 10px;
+	margin-bottom: 50px;
+	position: sticky;
+	top:0;
+	z-index: 2;
+}
+#chat header h1 {
+	margin-bottom: 0;
+}
+#chat header p {
+	color: #ccc;
+	text-align: center;
+}
+.message {
+	text-align: center;
+	margin-bottom: 2em;
+}
+.message .login-user,
+.message .time {
+	font-size: 80%;
+	display:inline-block;
+	color: #ccc;	
+}
+.message .login-user {
+	vertical-align: top;
+}
+.message .time {
+	vertical-align: bottom;
+}
+.message .text {
+	display: inline-block;
+	padding: 15px;
+	border-radius: 20px;
+	color: #ccc;
+	background-color: #16a0aa;
+}
+
