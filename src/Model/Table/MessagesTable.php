@@ -59,9 +59,10 @@ class MessagesTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->scalar('message')
-            ->requirePresence('message', 'create')
-            ->notEmptyString('message');
+            ->scalar('message', 'メッセージが不正です')
+            ->requirePresence('message', 'create', 'メッセージが不正です')
+            ->notEmptyString('message', 'メッセージを入力してください')
+            ->maxLength('message', 50, '50字以内で入力してください');
 
         return $validator;
     }
