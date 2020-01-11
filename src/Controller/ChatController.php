@@ -5,12 +5,29 @@ use App\Controller\AppController;
 
 class ChatController extends AppController
 {
+    public $useTable = false;
+
+    public $paginate = [
+        'limit' => 100,
+        'order' => ['created' => 'desc'],
+        'contain' => ['Users'],
+    ];
+
     public function initialize()
     {
+        parent::initialize();
+
+        $this->loadComponent('Paginator');
+
+        $this->loadModel('Messages');
+        $this->loadModel('Users');
+
+        $this->viewBuilder()->autoLayout(false);
     }
 
     public function index()
     {
+　　　　 // メッセージ投稿機能
         $message = $this->Messages->newEntity();
         if ($this->request->is('post')) {
             $message = $this->Messages->patchEntity($message, $this->request->getData());
@@ -24,6 +41,11 @@ class ChatController extends AppController
         }
         $users = $this->Messages->Users->find('list', ['limit' => 200]);
         $this->set(compact('message', 'users'));
+　　　　　
+     　　// メッセージ表示機能
+        $chatMessages = $this->paginate('Messages');
+
+        $this->set(compact('chatMessages'));
     }
 
     public function add()
