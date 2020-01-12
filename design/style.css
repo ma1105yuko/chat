@@ -121,7 +121,7 @@ form input[type="password"]{
 
 /* chat room*/
 #chat header {
-	background:#202020;
+	background:#2d0d36;
 	padding: 10px;
 	margin-bottom: 50px;
 	position: sticky;
@@ -135,14 +135,10 @@ form input[type="password"]{
 	color: #ccc;
 	text-align: center;
 }
-.message {
-	text-align: center;
-	margin-bottom: 2em;
-}
 .message .login-user,
 .message .time {
 	font-size: 80%;
-	display:inline-block;
+	display:block;
 	color: #ccc;	
 }
 .message .login-user {
@@ -155,7 +151,67 @@ form input[type="password"]{
 	display: inline-block;
 	padding: 15px;
 	border-radius: 20px;
-	color: #ccc;
-	background-color: #16a0aa;
+	color: #fff;	
 }
+.my-message {
+	text-align: right;
+	margin-right: 55px;
+}
+.my-message .text {
+	background-color: #16a0aa;
+	position: relative;	
+}
+.my-message .text::before {
+	content: '';
+	position: absolute;
+	display: block;
+	border-radius: 50%;
+	background-color: #16a0aa;
+	right: -35px;
+	bottom: 15px;
+	width: 30px;
+	height: 30px;
+  }
+  .my-message .text::after {
+	content: '';
+	position: absolute;
+	display: block;
+	border-radius: 50%;
+	background-color: #16a0aa;
+	right: -55px;
+	bottom: 10px;
+	width: 15px;
+	height: 15px;
+  }
+.other-message {
+	text-align: left;
+	margin-left: 55px;
+}
+.other-message .text {
+	background-color: #f8ac20;
+	position: relative;
+}
+.other-message .text::before {
+	content: '';
+	position: absolute;
+	display: block;
+	border-radius: 50%;
+	background-color: #f8ac20;
+	left: -35px;
+	bottom: 15px;
+	width: 30px;
+	height: 30px;
+}
+  .other-message .text::after {
+	content: '';
+	position: absolute;
+	display: block;
+	border-radius: 50%;
+	background-color: #f8ac20;
+	left: -55px;
+	bottom: 10px;
+	width: 15px;
+	height: 15px;
+}
+
 
