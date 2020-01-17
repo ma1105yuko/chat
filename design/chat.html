@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chat</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  
+<body id="chat">
+    <header>
+        <h1>Variableavalanchezueha Room</h1>
+        <p>logged in:ログインユーザー名</p><!--ログインユーザー名の箇所が変わるイメージです-->
+    </header>
+        <main class="inner"> 
+            <div class="message my-message">
+                <span class="login-user">投稿者名</span>
+                <div class="text">ここに自分のメッセージが入ります。</div>
+                <span class="time">13:30</span>
+            </div>
 
+            <div class="message other-message">
+                <span class="login-user">投稿者名</span>
+                <div class="text">ここに他の人のメッセージが入ります。</div>
+                <span class="time">19:30</span>
+            </div>
 
-  <div class=""> 
-    <form action="#" method="post">
-      <div>
-        <label for="msg"></label>
-        <input type="textarea" id="msg" name="message" placeholder="メッセージを入力"/>
-      </div>
-    </form>
-</div>
+            <div class=""> 
+                <form action="#" method="post">
+                  <div>
+                    <label for="msg"></label>
+                    <input type="textarea" id="msg" name="message" placeholder="メッセージを入力"/>
+                  </div>
+                </form>
+            </div>
+        </main>
 </body>
 </html>
