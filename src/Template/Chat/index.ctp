@@ -29,16 +29,25 @@
         <span class="time"><?= h($chatMessage->created->i18nFormat('HH:mm')) ?></span>
       </div>
   <?php endforeach; ?>
-  </main>
 
-  <div class="paginator">
-    <ul class="pagination">
-      <?= $this->Paginator->first(' |<<') ?>
-      <?= $this->Paginator->prev(' <') ?>
-      <?= $this->Paginator->next('> ') ?>
-      <?= $this->Paginator->last('>>| ') ?>
-    </ul>
-  </div>
+    <div class="message-form">
+      <?= $this->Form->create('message') ?>
+      <?= $this->Form->control('message', [
+          'label' => false,
+      ]) ?>
+      <?= $this->Form->submit('post') ?>
+      <?= $this->Form->end() ?>
+    </div>
+
+    <div class="paginator">
+      <ul class="pagination">
+        <?= $this->Paginator->first(' |<<') ?>
+        <?= $this->Paginator->prev(' <') ?>
+        <?= $this->Paginator->next('> ') ?>
+        <?= $this->Paginator->last('>>| ') ?>
+      </ul>
+    </div>
+  </main>
 </body>
 
 </html>
