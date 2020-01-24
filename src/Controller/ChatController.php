@@ -23,6 +23,8 @@ class ChatController extends AppController
         $this->loadModel('Users');
 
         $this->viewBuilder()->autoLayout(false);
+
+        $this->set('authuser', $this->Auth->user());
     }
 
     public function index()
