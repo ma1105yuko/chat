@@ -16,13 +16,20 @@
     <h1>Variableavalanchezueha Room</h1>
     <p>logged in: <?= h($authuser['username']) ?></p>
   </header>
+
+  <main class="inner">
   <?php foreach ($chatMessages as $chatMessage) : ?>
-    <div style="width: max-content;margin: 4px; background: pink;">
-      <p style="display: inline-block; padding: 0 16px;">username: <?= h($chatMessage->user->username) ?></p>
-      <p style="display: inline-block; padding: 0 16px;">message: <?= h($chatMessage->message) ?></p>
-      <p style="display: inline-block; padding: 0 16px;">created: <?= h($chatMessage->created->i18nFormat('yyyy-MM-dd HH:mm:ss')) ?></p>
-    </div>
+    <?php if ($chatMessage->user->id === $authuser['id']) : ?>
+      <div class="chatmessage my-message">
+    <?php else : ?>
+      <div class="chatmessage other-message">
+    <?php endif; ?>
+        <span class="login-user"><?= h($chatMessage->user->username) ?></span>
+        <div class="text"><?= h($chatMessage->message) ?></div>
+        <span class="time"><?= h($chatMessage->created->i18nFormat('HH:mm')) ?></span>
+      </div>
   <?php endforeach; ?>
+  </main>
 
   <div class="paginator">
     <ul class="pagination">

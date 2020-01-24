@@ -135,19 +135,19 @@ form input[type="password"]{
 	color: #ccc;
 	text-align: center;
 }
-.message .login-user,
-.message .time {
+.chatmessage .login-user,
+.chatmessage .time {
 	font-size: 80%;
 	display:block;
 	color: #ccc;
 }
-.message .login-user {
+.chatmessage .login-user {
 	vertical-align: top;
 }
-.message .time {
+.chatmessage .time {
 	vertical-align: bottom;
 }
-.message .text {
+.chatmessage .text {
 	display: inline-block;
 	padding: 15px;
 	border-radius: 20px;
