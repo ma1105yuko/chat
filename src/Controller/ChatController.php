@@ -27,7 +27,7 @@ class ChatController extends AppController
 
     public function index()
     {
-　　　　 // メッセージ投稿機能
+        // メッセージ投稿機能
         $message = $this->Messages->newEntity();
         if ($this->request->is('post')) {
             $message = $this->Messages->patchEntity($message, $this->request->getData());
@@ -41,14 +41,10 @@ class ChatController extends AppController
         }
         $users = $this->Messages->Users->find('list', ['limit' => 200]);
         $this->set(compact('message', 'users'));
-　　　　　
-     　　// メッセージ表示機能
+
+        // メッセージ表示機能
         $chatMessages = $this->paginate('Messages');
 
         $this->set(compact('chatMessages'));
-    }
-
-    public function add()
-    {
     }
 }
