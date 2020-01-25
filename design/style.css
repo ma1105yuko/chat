@@ -139,7 +139,7 @@ form input[type="password"]{
 .message .time {
 	font-size: 80%;
 	display:block;
-	color: #ccc;	
+	color: #ccc;
 }
 .message .login-user {
 	vertical-align: top;
@@ -151,7 +151,7 @@ form input[type="password"]{
 	display: inline-block;
 	padding: 15px;
 	border-radius: 20px;
-	color: #fff;	
+	color: #fff;
 }
 .my-message {
 	text-align: right;
@@ -159,7 +159,7 @@ form input[type="password"]{
 }
 .my-message .text {
 	background-color: #16a0aa;
-	position: relative;	
+	position: relative;
 }
 .my-message .text::before {
 	content: '';
@@ -171,8 +171,8 @@ form input[type="password"]{
 	bottom: 15px;
 	width: 30px;
 	height: 30px;
-  }
-  .my-message .text::after {
+}
+.my-message .text::after {
 	content: '';
 	position: absolute;
 	display: block;
@@ -182,7 +182,7 @@ form input[type="password"]{
 	bottom: 10px;
 	width: 15px;
 	height: 15px;
-  }
+}
 .other-message {
 	text-align: left;
 	margin-left: 55px;
@@ -202,7 +202,7 @@ form input[type="password"]{
 	width: 30px;
 	height: 30px;
 }
-  .other-message .text::after {
+.other-message .text::after {
 	content: '';
 	position: absolute;
 	display: block;
