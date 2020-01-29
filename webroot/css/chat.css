@@ -122,6 +122,7 @@ form input[type="password"]{
 
 /* chat room*/
 #chat header {
+	position: relative;
 	background:#2d0d36;
 	padding: 10px;
 	margin-bottom: 50px;
@@ -136,6 +137,17 @@ form input[type="password"]{
 	color: #ccc;
 	text-align: center;
 }
+#chat header .logout {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	margin-right: 40px;
+	padding: 8px 16px;
+	background: #ccc;
+	border-radius: 3px;
+}
+
 .chatmessage .login-user,
 .chatmessage .time {
 	font-size: 80%;

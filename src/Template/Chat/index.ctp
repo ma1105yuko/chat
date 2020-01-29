@@ -15,6 +15,9 @@
   <header>
     <h1>Variableavalanchezueha Room</h1>
     <p>logged in: <?= h($authuser['username']) ?></p>
+    <p class="logout">
+      <?= $this->Html->link('logout', ['controller' => 'Logout', 'action' => 'index']) ?>
+    </p>
   </header>
 
   <main class="inner">
