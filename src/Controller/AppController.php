@@ -82,6 +82,6 @@ class AppController extends Controller
           'authError' => 'ログインが必要です'
         ]);
 
-        $this->Auth->allow(['display', 'index', 'view']); //後で要修正
+        $this->Auth->allow(['display']);
     }
 }
