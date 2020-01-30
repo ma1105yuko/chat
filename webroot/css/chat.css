@@ -53,7 +53,7 @@ input {
 h1 {
 	color: #fff;
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 2vw;
 	text-align: center;
 	margin-bottom: 1em;
 }
@@ -77,7 +77,7 @@ form input[type="password"]{
 	color: #a9a9a9;
 	margin-bottom: 3em;
 	padding: 0 16px;
-	width: 230px;
+	width: 80%;
 	height: 50px;
 }
 
@@ -85,7 +85,7 @@ form input[type="password"]{
 #login form input[type="submit"] {
 	background: #a160cd;
 	border: 0;
-	width: 200px;
+	width: 60%;
 	height: 40px;
 	border-radius: 3px;
 	color: #fff;
@@ -110,7 +110,7 @@ form input[type="password"]{
 #signup form input[type="submit"] {
 	background: #8de7ee;
 	border: 0;
-	width: 200px;
+	width: 60%;
 	height: 40px;
 	border-radius: 3px;
 	color: #fff;
@@ -122,6 +122,7 @@ form input[type="password"]{
 
 /* chat room*/
 #chat header {
+	width:100%;
 	position: relative;
 	background:#050401;
 	padding: 10px;
@@ -156,7 +157,6 @@ form input[type="password"]{
 	color: #fff;
 	background: #a7333f;
 }
-
 
 .chatmessage .login-user,
 .chatmessage .time {
@@ -283,4 +283,18 @@ form input[type="password"]{
 #chat form input[type="submit"]:hover {
 	color: #a7333f;
 	background: #fff;
+}
+@media screen and (max-width: 479px) {
+	#chat .inner {
+		width:95%;
+	}
+	#chat header .logout {
+		margin-right:1em;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#chat .inner {
+		width:95%;
+	}
 }
