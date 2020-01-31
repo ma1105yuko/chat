@@ -35,7 +35,7 @@ body {
 	font-size: 16px;
 }
 .inner {
-	width: 960px;
+	max-width: 960px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 160px;
@@ -284,6 +284,7 @@ form input[type="password"]{
 	color: #a7333f;
 	background: #fff;
 }
+
 @media screen and (max-width: 479px) {
 	#chat .inner {
 		width:95%;
@@ -293,8 +294,4 @@ form input[type="password"]{
 	}
 }
 
-@media screen and (max-width: 767px) {
-	#chat .inner {
-		width:95%;
-	}
-}
+
